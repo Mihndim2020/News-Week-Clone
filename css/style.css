@@ -38,3 +38,7 @@ header nav {
   border-right: 0.5px solid #d9d9d9 !important;
   height: 50%;
 }
+
+.main-links-lg, .secondary-links {
+    white-space: nowrap;
+} 
