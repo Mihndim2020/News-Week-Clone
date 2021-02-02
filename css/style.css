@@ -1,0 +1,18 @@
+body {
+  background-color: #f4f5f6;
+}
+
+@media only screen and (min-width: 992px) {
+  #md-nav {
+    position: absolute;
+    left: -999999px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+    #lg-nav {
+      position: absolute;
+      left: -999999px;
+    }
+  }
+  
