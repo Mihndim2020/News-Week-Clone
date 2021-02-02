@@ -25,8 +25,9 @@ body {
 
 .page-header .big-logo {
   display: block;
-  width: 232px;
-  height: 40px;
+  width: 350px;
+  height: 90px;
+  padding: 20px;
   fill: white;
 }
 
@@ -41,6 +42,13 @@ header nav .trapezoid {
     width: 25px;
 }
 
+
+
+.border-top {
+    border-bottom: 1px solid #dee2e6!important;
+    margin-top: 20px;
+} 
+
 @media only screen and (min-width: 992px) {
     header nav .main-links-lg {
       width: 93%;
@@ -53,7 +61,9 @@ header nav .trapezoid {
 
   }
 
-.border {
+.border,
+.about-us ul li,
+.editions {
   border-right: 0.5px solid #d9d9d9 !important;
   height: 50%;
 }
@@ -66,4 +76,25 @@ justify-content: space-evenly;
 .main-links-lg,
 .secondary-links {
   white-space: nowrap;
+}
+
+this is just for markup 
+.main-content{
+    width: 1200px;
+    height: 600px;
+    background-color: #f4f5f6;
+}
+
+.footer-logo {
+    width: 250px;
+    height: 70PX;
+    fill: red;
+}
+
+footer .right-side {
+font-size: 2rem;
+}
+
+footer .right-side a:hover {
+    color: blue;
 }
