@@ -34,11 +34,36 @@ header nav {
   background-color: #ff0500;
 }
 
+header nav .trapezoid {
+    border-bottom: 43px solid white;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 25px;
+}
+
+@media only screen and (min-width: 992px) {
+    header nav .main-links-lg {
+      width: 93%;
+      position: absolute;
+      bottom: -15px;
+    }
+
+    .d-lg-block {
+    display: block!important;
+
+  }
+
 .border {
   border-right: 0.5px solid #d9d9d9 !important;
   height: 50%;
 }
-
-.main-links-lg, .secondary-links {
-    white-space: nowrap;
-} 
+ 
+.icon-input {
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+}
+.main-links-lg,
+.secondary-links {
+  white-space: nowrap;
+}
