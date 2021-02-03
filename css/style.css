@@ -2,14 +2,14 @@ body {
   background-color: #f4f5f6;
 }
 
-@media only screen and (min-width: 766px) {
+@media only screen and (min-width: 992px) {
   #md-nav {
     position: absolute;
     left: -999999px;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   #lg-nav {
     position: absolute;
     left: -999999px;
@@ -36,7 +36,7 @@ header nav {
 }
 
 header nav .trapezoid {
-  border-bottom: 43px solid white;
+  border-bottom: 27px solid white;
   border-right: 25px solid transparent;
   height: 0;
   width: 25px;
