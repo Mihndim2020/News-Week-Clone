@@ -1,5 +1,8 @@
 body {
   background-color: #f4f5f6;
+  font-family: "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 @media only screen and (min-width: 992px) {
