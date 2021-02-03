@@ -1,7 +1,15 @@
 body {
   background-color: #f4f5f6;
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  font-family:
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
     "Noto Color Emoji";
 }
 
@@ -70,7 +78,8 @@ p {
   font-weight: bold;
   font-size: 0;
   font-family: "Roboto Condensed", sans-serif;
-  background: url(https://web.archive.org/web/20210120130223im_/https://g.newsweek.com/www/images/free-sign-up.svg)
+  background:
+    url(https://web.archive.org/web/20210120130223im_/https://g.newsweek.com/www/images/free-sign-up.svg)
     center/108px no-repeat #f61602;
   border-radius: 3px;
 }
@@ -85,20 +94,20 @@ p {
   display: block;
   width: 29px;
   height: 28px;
-  background: url(https://web.archive.org/web/20210120125445im_/https://g.newsweek.com/www/images/logo-n1.svg)
+  background:
+    url(https://web.archive.org/web/20210120125445im_/https://g.newsweek.com/www/images/logo-n1.svg)
     center/contain no-repeat #f72210;
   margin-right: 10px;
 }
 
 .free-signup .form-text {
-    color: #555;
-    font-size: 14px;
-    font-family: "Helvetica",sans-serf;
-    background-color: white;
-    border: 1px solid #e0e1e1;
-    text-indent: 9px;
+  color: #555;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: white;
+  border: 1px solid #e0e1e1;
+  text-indent: 9px;
 }
-
 
 @media only screen and (min-width: 992px) {
   #md-nav {
