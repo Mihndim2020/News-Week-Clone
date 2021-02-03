@@ -2,7 +2,7 @@ body {
   background-color: #f4f5f6;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 766px) {
   #md-nav {
     position: absolute;
     left: -999999px;
@@ -60,8 +60,7 @@ header nav .trapezoid {
 }
 
 .border,
-.about-us ul li,
-.editions {
+.about-us ul li {
   border-right: 0.5px solid #d9d9d9 !important;
   height: 50%;
 }
