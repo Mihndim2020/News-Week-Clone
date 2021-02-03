@@ -22,7 +22,7 @@
     <title>The News Week Clone</title>
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header fixed-top bg-white">
       <div class="container-fluid p-0">
         <nav
           class="navbar navbar-expand-md navbar-dark bg-danger d-flex flex-nowrap justify-content-between"
@@ -271,8 +271,11 @@
       </div>
     </header>
 
-    <main class="main-content container">
-        <div class="row no-gutters">
+    <main class="mt-100">
+        <div class="row no-gutters mt-100">
+
+            <!-- top stories section -->
+
             <div class="col-12 col-md-7 order-md-2 col-lg-5 sticky-md d-flex flex-column">
                 <section class="top-stories bg-white p-3">
                     <h3 class="text-muted">TOP STORY</h3>
@@ -285,6 +288,10 @@
                       <p>Actions related to the COVID-19 crisis, climate change and racial equality are to be among the first taken as he begins his tenure.</p>
                     </article>
                   </section>
+
+
+                  <!-- my turn -->
+
 
                   <section class="my-turn d-none d-md-block bg-white p-3 mt-3 mt-md-0">
                     <h2 class="text-muted">MY TURN</h2>
@@ -309,6 +316,8 @@
                       </figure>
                     </div>
                   </section>
+
+                  <!-- culture and travel -->
 
                   <section class="culture d-none d-md-block bg-white p-3 mt-3 mt-md-0">
                     <h3 class="text-muted">CULTURE & TRAVEL</h3>
@@ -336,6 +345,8 @@
                       </article>
                     </div>
                   </section>
+
+                  <!-- more stories  -->
 
                   <section class="more-stories d-none d-md-block bg-white p-3 mt-3 mt-md-0">
                     <h2 class="text-muted border-bottom">MORE STORIES</h2>
@@ -537,11 +548,11 @@
                     </section>
                   </div>
                 </section>
-            </div>
+            
 
+                    <!-- FEATURED STORIES  -->
 
-
-            <div class="col-12 col-md-5 order-md-1 col-lg-3">
+             <div class="col-12 col-md-5 order-md-1 col-lg-3">
                 
                     <section class="featured-stories bg-white p-3 mt-3 mt-md-0">
                       <h2 class="text-muted">FEATURED STORIES</h2>
@@ -586,8 +597,24 @@
                         <h3>Joe Biden Immigration Orders Upend Donald Trump's Legacy</h3>
                         <p>The Biden Administration will issue an order stopping construction of the border wall on its first day.</p>
                       </article>
+                      <article>
+                        <figure class="boxed shadow-sm">
+                          <img class="w-100" src="https://d.newsweek.com/en/full/1711616/donald-trump.jpg?w=790&f=011044b698a011462e7e73e5c52ddd4e" alt="U.S">
+                          <figcaption class="bg-white py-1 px-3 font-weight-bold">U.S.</figcaption>
+                        </figure>
+                        <h3>The 73 People Pardoned by Donald Trump on His Last Day As President</h3>
+                        <p>Notable people pardoned by Trump today include former White House chief strategist Steve Bannon and rapper Lil Wayne.</p>
+                      </article>
+                      <article>
+                        <figure class="boxed shadow-sm">
+                          <img class="w-100" src="https://d.newsweek.com/en/full/1711585/trump-waves-south-lawn.jpg?w=1600&h=1600&q=88&f=428e8dd650738410388e44f8a61b1976" alt="Politics">
+                          <figcaption class="bg-white py-1 px-3 font-weight-bold">POLITICS</figcaption>
+                        </figure>
+                        <h3>Donald Trump Can Issue Secret Pardons, but They're Risky</h3>
+                        <p>Trump chose not to issue pardons for himself of his personal attorney, former New York Mayor Rudy Giuliani.</p>
+                      </article>
 
-                      
+                            <!-- SPONSORED INSIGHTS -->
                       <article>
                         <figure class="boxed shadow-sm">
                           <img class="w-100" src="https://d.newsweek.com/en/full/1690478/hokkaido-forest-pic.jpg" alt="SPONSORED">
@@ -825,11 +852,45 @@
                               </article>
                               <article class="card mb-4">
                                 <figure class="card-img-top boxed">
+                                  <img class="w-100" src="https://d.newsweek.com/en/full/1675787/americas-most-responsible-companies-2021.png?w=1310&q=95&f=fdc5ccfead44910f025db34c699bce4a" alt="RANKINGS">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">RANKINGS</figcaption>
+                                </figure>
+                                <div class="card-body">
+                                  <h3 class="card-title font-weight-bolder">America's Most Responsible Companies 2021
+                                </h3>
+                                  <p class="card-text">We partnered with Statista to rank the country's Most Responsible Companies. They share the values that we all prioritize, and that's worth recognizing in 2021</p>
+                                </div>
+                              </article>
+
+                              <article class="card mb-4">
+                                <figure class="card-img-top boxed">
+                                  <img class="w-100" src="https://d.newsweek.com/en/full/1675787/americas-most-responsible-companies-2021.png?w=1310&q=95&f=fdc5ccfead44910f025db34c699bce4a" alt="RANKINGS">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">RANKINGS</figcaption>
+                                </figure>
+                                <div class="card-body">
+                                  <h3 class="card-title font-weight-bolder">America's Most Responsible Companies 2021
+                                </h3>
+                                  <p class="card-text">We partnered with Statista to rank the country's Most Responsible Companies. They share the values that we all prioritize, and that's worth recognizing in 2021</p>
+                                </div>
+                              </article>
+                              <article class="card mb-4">
+                                <figure class="card-img-top boxed">
                                   <img class="w-100" src="https://assets.entrepreneur.com/content/3x2/2000/1593154436-Ent-Roofstock.png?width=600&crop=16:9" alt="Sponsored insight">
                                   <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">Sponsored insight</figcaption>
                                 </figure>
                                 <div class="card-body">
                                   <h3 class="card-title font-weight-bolder">75% of Roofstock users are first-time real estate investors, and more than half are under 35.</p>
+                                </div>
+                              </article>
+                              <article class="card mb-4">
+                                <figure class="card-img-top boxed">
+                                  <img class="w-100" src="https://d.newsweek.com/en/full/1675787/americas-most-responsible-companies-2021.png?w=1310&q=95&f=fdc5ccfead44910f025db34c699bce4a" alt="RANKINGS">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">RANKINGS</figcaption>
+                                </figure>
+                                <div class="card-body">
+                                  <h3 class="card-title font-weight-bolder">America's Most Responsible Companies 2021
+                                </h3>
+                                  <p class="card-text">We partnered with Statista to rank the country's Most Responsible Companies. They share the values that we all prioritize, and that's worth recognizing in 2021</p>
                                 </div>
                               </article>
                              
@@ -839,11 +900,9 @@
 
          </div>
 
-    </div>
-
-        
-    </main>
-    <footer class="footer fixed-bottom bg-white d-block">
+    </div>    
+</main>
+    <footer class="footer fixed-bottom bg-white">
       <div class="row container">
         <div class="upper-footer d-flex flex-row flex-wrap justify-content-between align-items-end border-bottom">
         
@@ -870,7 +929,7 @@
               <p>&copy; 2021 NEWSWEEK DIGITAL LLC</p>
             </div>
           </div>
-          <div class="right-side 2rem">
+          <div class="right-side 2rem ">
             <a href="#"
               ><i
                 class="fab fa-facebook-square mr-2 text-dark font-weight-bold"
