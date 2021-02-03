@@ -25,13 +25,13 @@ h4 {
   font-weight: bold;
 }
 
-p{
-    font-size: 0.8rem;
+p {
+  font-size: 0.8rem;
 }
 
 .more-stories figure,
 .latest-news figure {
-    border-bottom: 0.5px solid #d9d9d9;
+  border-bottom: 0.5px solid #d9d9d9;
 }
 
 .img-thumbnail {
@@ -39,6 +39,20 @@ p{
   height: 120px !important;
   border: none;
 }
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.line {
+  border-top: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+/* .featured-stories img {
+    width: 400px !important;
+    height: 400px !important;
+} */
 
 @media only screen and (min-width: 992px) {
   #md-nav {
