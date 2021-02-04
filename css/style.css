@@ -1,18 +1,9 @@
 body {
   background-color: #f4f5f6;
-  font-family:
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    "Noto Sans",
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
 }
-
 h1 {
   font-size: 1.2rem;
 }
@@ -48,8 +39,16 @@ p {
   border: none;
 }
 
-.rounded-circle {
-  border-radius: 50% !important;
+main img,
+h3,
+h4 {
+  cursor: pointer;
+}
+
+main h3:hover,
+main h4:hover {
+  text-decoration: underline;
+  text-decoration-color: red;
 }
 
 .line {
@@ -78,8 +77,7 @@ p {
   font-weight: bold;
   font-size: 0;
   font-family: "Roboto Condensed", sans-serif;
-  background:
-    url(https://web.archive.org/web/20210120130223im_/https://g.newsweek.com/www/images/free-sign-up.svg)
+  background: url(https://web.archive.org/web/20210120130223im_/https://g.newsweek.com/www/images/free-sign-up.svg)
     center/108px no-repeat #f61602;
   border-radius: 3px;
 }
@@ -94,8 +92,7 @@ p {
   display: block;
   width: 29px;
   height: 28px;
-  background:
-    url(https://web.archive.org/web/20210120125445im_/https://g.newsweek.com/www/images/logo-n1.svg)
+  background: url(https://web.archive.org/web/20210120125445im_/https://g.newsweek.com/www/images/logo-n1.svg)
     center/contain no-repeat #f72210;
   margin-right: 10px;
 }
@@ -110,14 +107,23 @@ p {
 }
 
 @media only screen and (min-width: 992px) {
-  #md-nav {
+  .md-nav {
     position: absolute;
     left: -999999px;
   }
 }
 
+main .btn-danger {
+  background-color: #ff0500;
+}
+
+main .subscribe .top-image {
+  top: 10%;
+  left: 10%;
+}
+
 @media only screen and (max-width: 992px) {
-  #lg-nav {
+  .lg-nav {
     position: absolute;
     left: -999999px;
   }
@@ -198,6 +204,8 @@ header nav .trapezoid {
 }
 
 footer .right-side {
+  position: absolute;
+  right: 10px;
   font-size: 2rem;
 }
 
