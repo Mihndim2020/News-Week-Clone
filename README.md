@@ -26,7 +26,7 @@
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/mihndim2020)
+- GitHub: [mihndim2020](https://github.com/mihndim2020)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
 
