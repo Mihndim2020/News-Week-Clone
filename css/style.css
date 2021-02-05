@@ -162,6 +162,10 @@ main .subscribe .top-image {
 
 }
 
+.newsletter .btn {
+    width: 150px;
+}
+
 .page-header .logo {
   display: block;
   width: 132px;
