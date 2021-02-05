@@ -166,6 +166,11 @@ main .subscribe .top-image {
     width: 150px;
 }
 
+.newsletter form {
+    margin-left: 5px !important;
+}
+
+
 .page-header .logo {
   display: block;
   width: 132px;
