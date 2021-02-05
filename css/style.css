@@ -156,11 +156,10 @@ main .subscribe .top-image {
   }
 
   .whitespace {
-    font-size: 00.8rem;
-    line-height: 1px;
-    padding-bottom: 0;
-    background-color: inherit;
+    position: absolute;
+    left: -999999px;
   }
+
 }
 
 .page-header .logo {
