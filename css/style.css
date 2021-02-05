@@ -1,7 +1,15 @@
 body {
   background-color: #f4f5f6;
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  font-family:
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
     "Noto Color Emoji";
 }
 
@@ -94,7 +102,8 @@ main h4:hover {
   font-weight: bold;
   font-size: 0;
   font-family: "Roboto Condensed", sans-serif;
-  background: url(https://web.archive.org/web/20210120130223im_/https://g.newsweek.com/www/images/free-sign-up.svg)
+  background:
+    url(https://web.archive.org/web/20210120130223im_/https://g.newsweek.com/www/images/free-sign-up.svg)
     center/108px no-repeat #f61602;
   border-radius: 3px;
 }
@@ -109,7 +118,8 @@ main h4:hover {
   display: block;
   width: 29px;
   height: 28px;
-  background: url(https://web.archive.org/web/20210120125445im_/https://g.newsweek.com/www/images/logo-n1.svg)
+  background:
+    url(https://web.archive.org/web/20210120125445im_/https://g.newsweek.com/www/images/logo-n1.svg)
     center/contain no-repeat #f72210;
   margin-right: 10px;
 }
