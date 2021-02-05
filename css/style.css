@@ -159,17 +159,15 @@ main .subscribe .top-image {
     position: absolute;
     left: -999999px;
   }
-
 }
 
 .newsletter .btn {
-    width: 150px;
+  width: 150px;
 }
 
 .newsletter form {
-    margin-left: 5px !important;
+  margin-left: 5px !important;
 }
-
 
 .page-header .logo {
   display: block;
