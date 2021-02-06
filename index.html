@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>The News Week Clone</title>
+  </head>
+  <body>
+    <header class="page-header fixed-top bg-white">
+      <div class="container-fluid ">
+        <nav
+          class="w-100 navbar navbar-expand-md navbar-dark bg-danger d-flex flex-nowrap justify-content-between md-nav"
+        >
+          <a class="navbar-brand" href="javascript:void(0)"
+            ><svg
+              class="logo"
+              version="1.1"
+              width="396"
+              height="60"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 396 60"
+              style="enable-background: new 0 0 395.6 60"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  class="st0"
+                  d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"
+                ></path>
+              </g></svg
+          ></a>
+
+          <div>
+            <a class="navbar-brand" href="#">
+              <span class="fas fa-user text-white-50 d-md-none"></span>
+              <span class="login d-none d-md-inline font-weight-bold"
+                >LOGIN</span
+              >
+            </a>
+            <a class="navbar-brand" href="#">
+              <span
+                class="badge badge-pill badge-warning py-2 px-3 d-flex align-items-center"
+              >
+                <span class="subscribe pr-1">SUBSCRIBE</span>
+                <span class="fas fa-chevron-right"></span>
+              </span>
+            </a>
+            <button
+              class="navbar-toggler d-lg-none"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navlinks"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </nav>
+
+        <nav class="navbar navbar-dark p-lg-0 pb-lg-3 lg-nav">
+          <div class="weather text-white d-none d-lg-block pl-3">
+            <i class="fas fa-cloud-sun-rain"></i>
+            <span class="font-weight-bold pl-2">26° Douala, CM</span>
+            <span class="fas fa-chevron-right"></span>
+            <p class="pt-1">Mon, Feb 01, 2021</p>
+          </div>
+          <a class="navbar-brand pl-3" href="#">
+            <svg
+              class="big-logo"
+              version="1.1"
+              width="396"
+              height="60"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 396 60"
+              style="enable-background: new 0 0 395.6 60"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  class="st0"
+                  d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"
+                ></path>
+              </g>
+            </svg>
+          </a>
+          <div>
+            <a class="navbar-brand" href="#">
+              <span class="fas fa-user text-white-50 d-md-none"></span>
+              <span class="login d-none d-md-inline font-weight-bold"
+                >LOGIN</span
+              >
+            </a>
+            <a class="navbar-brand" href="#">
+              <span
+                class="badge badge-pill badge-warning py-2 px-3 d-flex align-items-center"
+              >
+                <span class="subscribe pr-1">SUBSCRIBE</span>
+                <span class="fas fa-chevron-right"></span>
+              </span>
+            </a>
+          </div>
+
+          <div
+            class="main-links-sm collapse navbar-collapse d-lg-flex m-0 p-0 text-nowrap"
+            id="navlinks"
+          >
+            <ul
+              class="navbar-nav d-lg-none bg-white text-dark px-3 font-weight-bold"
+            >
+              <li class="icon-input nav-item">
+                <form action="#">
+                  <input
+                    class="border-0 w-100 nav-link"
+                    type="text"
+                    placeholder="Search"
+                  /><span><i class="fas fa-search"></i></span>
+                </form>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">U.S.</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">World</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Business</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tech &amp; Science</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Culture</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Newsgeek</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Sports</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Health</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">The Debate</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Experts</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Vantage</a></li>
+            </ul>
+          </div>
+
+          <div class="main-links-lg d-none d-lg-flex">
+            <ul
+              class="nav bg-white px-3 flex-grow-1 justify-content-between align-items-center flex-nowrap"
+            >
+              <li class="nav-item">
+                <a class="nav-link text-dark font-weight-bold" href="#">U.S.</a>
+              </li>
+              <li class="separator border"></li>
+              <li class="nav-item">
+                <a class="nav-link text-dark font-weight-bold" href="#"
+                  >World</a
+                >
+              </li>
+              <li class="separator border"></li>
+              <li class="nav-item">
+                <a class="nav-link text-dark font-weight-bold" href="#"
+                  >Business</a
+                >
+              </li>
+              <li class="separator border"></li>
+              <li class="nav-item">
+                <a class="nav-link text-dark font-weight-bold" href="#"
+                  >Tech &amp; Science</a
+                >
+              </li>
+              <li class="separator border"></li>
+              <li class="nav-item">
+                <a class="nav-link text-dark font-weight-bold" href="#"
+                  >Culture</a
+                >
+              </li>
+              <li class="separator border"></li>
+              <li class="nav-item">
+                <a class="nav-link text-dark font-weight-bold" href="#"
+                  >Newsgeek</a
+                >
+              </li>
+              <li class="separator border"></li>
+              <li class="nav-item">
+                <a class="nav-link text-dark font-weight-bold" href="#"
+                  >Sports</a
+                >
+              </li>
+              <li class="separator border"></li>
+              <li class="nav-item">
+                <a class="nav-link text-dark font-weight-bold" href="#"
+                  >Health</a
+                >
+              </li>
+              <li class="separator border"></li>
+              <li class="nav-item">
+                <a class="nav-link text-dark font-weight-bold" href="#"
+                  >The Debate</a
+                >
+              </li>
+              <li class="separator border"></li>
+              <li class="nav-item">
+                <a class="nav-link text-dark font-weight-bold" href="#"
+                  >Experts</a
+                >
+              </li>
+              <li class="separator border"></li>
+              <li class="nav-item">
+                <a class="nav-link text-dark font-weight-bold" href="#"
+                  >Vantage</a
+                >
+              </li>
+              <li class="icon-input nav-item">
+                <input
+                  class="border-0 w-100 nav-link text-dark font-weight-bold"
+                  type="text"
+                  placeholder="Search"
+                />
+                <span><i class="fas fa-search"></i></span>
+              </li>
+            </ul>
+            <div class="trapezoid d-none d-lg-block"></div>
+          </div>
+        </nav>
+        <div class="white-space bg-white border-bottom d-none d-lg-block"></div>
+
+        <ul
+          class="secondary-links nav bg-white font-weight-bolder d-none d-lg-flex px-3 align-items-center flex-nowrap border-bottom border-top"
+        >
+          <li class="nav-item">
+            <a class="nav-link text-dark font-weight-bold" href="#">TRENDING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary pr-5" href="#">JOE BIDEN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary pr-5" href="#">DONALD TRUMP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary pr-5" href="#">CORONAVIRUS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary pr-5" href="#"
+              >STIMULUS PACKAGE</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary pr-5" href="#">VACCINE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary pr-5" href="#">CAPITOL RIOTS</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+        <div class="row d-flex  w-100 whitespace px-3">
+        <p class = "w-100 text-white text-nowrap"> Newsweek</p>
+        <p class = "w-100 text-white text-nowrap"> Newsweek</p>
+        <p class = "w-100 text-white text-nowrap"> Newsweek</p>
+        <p class = "w-100 text-white text-nowrap"> Newsweek</p>
+     
+        </div>
+
+    <main class="container-fluid mt-5">
+        <div class="row no-gutters bg-white mt-5">
+
+            <!-- top stories section -->
+
+            <div class="col-12 col-md-7 order-md-2 col-lg-5 sticky-md d-flex flex-column">
+                <section class="top-stories bg-white p-3">
+                    <h3 class="text-muted">TOP STORY</h3>
+                    <article>
+                      <figure class="boxed shadow-sm">
+                        <img class="w-100" src="https://d.newsweek.com/en/full/1711649/biden-speaks-delaware.jpg" alt="World">
+                        <figcaption class="bg-white py-1 px-3 font-weight-bold text-danger">NEWS</figcaption>
+                      </figure>
+                      <h3 class="font-weight-bold"> Joe Biden's First Executive Actions Undo Many of Donald Trump's</h3>
+                      <p>Actions related to the COVID-19 crisis, climate change and racial equality are to be among the first taken as he begins his tenure.</p>
+                    </article>
+                  </section>
+
+
+                  <!-- my turn -->
+
+
+                  <section class="my-turn d-none d-md-block bg-white p-3 mt-3 mt-md-0">
+                    <h2 class="text-muted">MY TURN</h2>
+                    <div class="row no-gutters d-flex justify-content-end">
+                      <figure class="col my-1 px-1">
+                        <img class="w-100 img-thumbnail" src="https://pressfrom.info/upload/images/real/2021/01/17/a-man-wearing-a-bow-tie-matt-murphy-and-michael-osullivan-right-the-friends-married-on-december-22-2_492651_.jpg?content=1" alt="my turn">
+                        <figcaption>
+                          <h4 class="text-secondary myturn-3">'I Married My Best Friend to Avoid Inheritance Tax</h4>
+                        </figcaption>
+                      </figure>
+                      <figure class="col my-1">
+                        <img class="w-100 img-thumbnail" src="https://d.newsweek.com/en/full/1717753/sabrianaif.jpg?w=1600&h=1600&q=88&f=e8fc5d7ecf683e04e14ac5e7e46f1940" alt="my turn">
+                        <figcaption>
+                          <h4 class="text-secondary mt-3 ">'I'm Transgender—Here's How the Ban Shaped My  Air Force'</h4>
+                        </figcaption>
+                      </figure>
+                      <figure class="col my-1">
+                        <img class="w-100 img-thumbnail" src="https://d.newsweek.com/en/full/1705436/nick-ut-presidential-medal-freedom-photographer.jpg" alt="my turn">
+                        <figcaption>
+                          <h4 class="text-secondary mt-3">Why I Accepted Trump's Medal Of Arts'</h4>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </section>
+
+                  <!-- culture and travel -->
+
+                  <section class="culture d-none d-md-block bg-white p-3 mt-3 mt-md-0">
+                    <h3 class="text-muted">CULTURE & TRAVEL</h3>
+                    <div class="row no-gutters d-flex justify-content-end">
+                      <article class="col m-1">
+                        <figure class="boxed shadow-sm">
+                          <img class="w-100 img-thumbnail myturn" src="https://d.newsweek.com/en/full/1709366/cul-map-steve-mccurry-banner.jpg" alt="photography">
+                          <figcaption class="text-dark py-1 px-2 font-weight-bold">PHOTOGRAPHY</figcaption>
+                        </figure>
+                        <h4 class="text-secondary mt-3">Steve McCurry's Search for Elsewhere: 40 Years of Unseen Images</h4>
+                      </article>
+                      <article class="col m-1">
+                        <figure class="boxed shadow-sm">
+                          <img class="w-100 img-thumbnail myturn" src="https://d.newsweek.com/en/full/1697308/cul-map-happiness-finland.jpg" alt="travel">
+                          <figcaption class="text-dark py-1 px-3 font-weight-bold">TRAVEL</figcaption>
+                        </figure>
+                        <h4 class="text-secondary mt-3">The Secrets to Happiness Around the World</h4>
+                      </article>
+                      <article class="col m-1">
+                        <figure class="boxed shadow-sm">
+                          <img class="w-100 img-thumbnail" src="https://d.newsweek.com/en/full/1691685/uncharted-eco-camp-patagonia.jpg?w=1440&h=720&f=603ceb11dfdc713e3e57ad32d53f008d" alt="travel">
+                          <figcaption class="text-dark py-1 px-3 font-weight-bold">TRAVEL</figcaption>
+                        </figure>
+                        <h4 class="text-secondary mt-3">Where We Are Dreaming of Traveling in 2021</h4>
+                      </article>
+                    </div>
+                  </section>
+
+                  <!-- more stories  -->
+
+                  <section class="more-stories d-none d-md-block bg-white p-3 mt-3 mt-md-0">
+                    <h2 class="text-muted border-bottom">MORE STORIES</h2>
+                    <div class="wrapper">
+                        <figure class="d-flex align-items-center mt-3">
+                          <img class ="img-thumbnail" src="https://d.newsweek.com/en/full/1711234/migrant-child-us-mexico-border-stranded-trump.jpg" alt="BY MIH JULIUS">
+                          <figcaption class="pl-3">
+                            <h4>Biden's Biggest Challenge? 67,000 Migrants Stranded at U.S.-Mexico Border</h4>
+                            <p class="m-0 text-secondary">The plans to do with the tens of thousands of asylum-seekers living in limbo in crowded shelters and makeshift camps along the border</p>
+                          </figcaption>
+                        </figure>
+                    </div>
+                    <div class="wrapper">
+                        <figure class="d-flex align-items-center mt-3">
+                          <img class="img-thumbnail"  src="https://d.newsweek.com/en/full/1711221/immigration-reform-ice-joe-biden-trump.jpg?w=1600&h=1200&q=88&f=136a254baa8489b2262f77edaba30934" alt="BY MIH JULIUS">
+                          <figcaption class="pl-3">
+                            <h4>Evangelicals, Police, Who Disliked Trump Immigration Policy May Back Reform</h4>
+                            <p class="m-0 text-secondary">Religious officers who were uncomfortable with family separations may be open to immigration reform.</p>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="wrapper">
+                        <figure class="d-flex align-items-center mt-3">
+                          <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1711586/donald-trump-speaking-video-white-house-pardons.jpg" alt="BY MIH JULIUS">
+                          <figcaption class="pl-3">
+                            <h4>Donald Trump Pardons Israeli Spy Handler Who Paid for American Secrets
+                            </h4>
+                            <p class="m-0 text-secondary">The president's flurry of pardons include former Israeli air force colonel Aviem Sella, who recruited the infamous spy Jonathan Pollard.</p>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="wrapper">
+                        <figure class="d-flex align-items-center mt-3">
+                          <img class="img-thumbnail" src="https://im-media.voltron.voanews.com/Drupal/01live-166/styles/sourced/s3/2021-01/2021-01-21T094515Z_1265630252_RC29CL91MU06_RTRMADP_3_USA-BIDEN-CORONAVIRUS.JPG?itok=HHn0DX0m" alt="BY MIH JULIUS">
+                          <figcaption class="pl-3">
+                            <h4>'Joe Biden's Schedule for His First Day As President</h4>
+                            <p class="m-0 text-secondary">Chinese has been coy about its preferred presidential pick, but the state-run tabloid has never been shy about its criticism of the outgoing Secretary of State.</p>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="wrapper">
+                        <figure class="d-flex align-items-center mt-3">
+                          <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1711642/russian-embassy-washington-dc.jpg?w=1600&h=1200&q=88&f=9299182aded97737fb13f128674144d4" alt="BY MIH JULIUS">
+                          <figcaption class="pl-3">
+                            <h4>U.S. Cut Russia Consulate Phones Before Trump's Last Day, Moscow Claims</h4>
+                            <p class="m-0 text-secondary">Officials are purchasing over 60 million tests a month with the hope to be the biggest country in the world to be testing everybody.</p>
+                          </figcaption>
+                        </figure>
+                      </div>
+ 
+                      <div class="wrapper">
+                        <figure class="d-flex align-items-center mt-3">
+                          <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1711569/rep-john-katko.jpg?w=790&f=c6c0e4cf4c79175b37ce68180fa32d61" alt="MIH JULIUS">
+                          <figcaption class="pl-3">
+                            <h4>GOP Rep. John Katko Says Capitol Riots 'Worse Than People Realized'</h4>
+                            <p class="m-0 text-secondary">In separate statements, the DoD and Taiwan's defense ministry both denied reports of training exercises involving U.S. Marines, despite conflicting accounts.</p>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="wrapper">
+                        <figure class="d-flex align-items-center mt-3">
+                          <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1711642/russian-embassy-washington-dc.jpg?w=1600&h=1200&q=88&f=9299182aded97737fb13f128674144d4" alt="BY MIH JULIUS">
+                          <figcaption class="pl-3">
+                            <h4>U.S. Cut Russia Consulate Phones Before Trump's Last Day, Moscow Claims</h4>
+                            <p class="m-0 text-secondary">Officials are purchasing over 60 million tests a month with the hope to be the biggest country in the world to be testing everybody.</p>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="wrapper">
+                        <figure class="d-flex align-items-center mt-3">
+                          <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1711620/abortion.jpg?w=1600&h=1200&q=88&f=70a99cffe577870e3f0d07636e0a6254" alt="BY MIH JULIUS">
+                          <figcaption class="pl-3">
+                            <h4>Mississippi Bill Classifying Abortions as Murder Introduced by GOP Lawmaker</h4>
+                            <p class="m-0 text-secondary">More than 782,000 people in the U.K. have lost their jobs during the pandemic and economists warn "we're not out of the woods yet".</p>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="wrapper">
+                        <figure class="d-flex align-items-center mt-3">
+                          <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1711569/rep-john-katko.jpg?w=790&f=c6c0e4cf4c79175b37ce68180fa32d61" alt="MIH JULIUS">
+                          <figcaption class="pl-3">
+                            <h4>GOP Rep. John Katko Says Capitol Riots 'Worse Than People Realized'</h4>
+                            <p class="m-0 text-secondary">In separate statements, the DoD and Taiwan's defense ministry both denied reports of training exercises involving U.S. Marines, despite conflicting accounts.</p>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="wrapper">
+                        <figure class="d-flex align-items-center mt-3">
+                          <img class = "img-thumbnail" src="https://www.ajc.com/resizer/g3eiXq6ae5GqOE5VI7Yp_ghmFy0=/1066x600/cloudfront-us-east-1.images.arcpublishing.com/ajc/CM5UAPRG6CZO7BYIVK4QT324GE.jpg" alt="BYMIH JULIUS">
+                          <figcaption class="pl-3">
+                            <h4>Jon Ossoff, Raphael Warnock Certified by Georgia as Senate Runoff Winners</h4>
+                            <p class="m-0 text-secondary">Control of the Senate will be decided in Georgia on January 5 in what is expected to be an expensive race.</p>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="wrapper">
+                        <figure class="d-flex align-items-center mt-3">
+                          <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1712782/rep-boebert-denies-capitol-giving-insurrectionists-tour.jpg?w=1600&h=1600&q=88&f=5203f5cfd60edd22ad8efc634b9551cb" alt="BY MIH JULIUS">
+                          <figcaption class="pl-3">
+                            <h4>Lauren Boebert Rejects Claims She Gave Rioters Capitol</h4>
+                            <p class="m-0 text-secondary">The four opposition MPs were expelled from Hong Kong's parliament after being accused of endangering national security.</p>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="wrapper">
+                        <figure class="d-flex align-items-center mt-3">
+                          <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1710590/trump-greets-supporters-texas.jpg?w=1600&h=1200&q=88&f=4466ee6260ee72c7d8114458b48ebfca" alt="BY MIH JULIUS">
+                          <figcaption class="pl-3">
+                            <h4>Trump Allies Await Pardons News as Clock Ticks Down on Presidential Powers</h4>
+                            <p class="m-0 text-secondary">The rally was who previously said segregation "was better" for Black people.</p>
+                          </figcaption>
+                        </figure>
+                      </div>
+
+                    </section>
+
+                    <section class="latest-news d-none d-md-block bg-white p-3 mt-3 mt-md-0">
+                        <h2 class="text-muted border-bottom">LATEST NEWS</h2>
+                        <div class="wrapper">
+                            <figure class="d-flex align-items-center mt-3">
+                              <img class ="img-thumbnail" src="https://d.newsweek.com/en/full/1711234/migrant-child-us-mexico-border-stranded-trump.jpg" alt="BY MIH JULIUS">
+                              <figcaption class="pl-3">
+                                <h4>Biden's Biggest Challenge? 67,000 Migrants Stranded at U.S.-Mexico Border</h4>
+                                <p class="m-0 text-secondary">The incoming president has not said what he plans to do with the tens of thousands of asylum-seekers  along the border</p>
+                              </figcaption>
+                            </figure>
+                        </div>
+                        <div class="wrapper">
+                            <figure class="d-flex align-items-center mt-3">
+                              <img class="img-thumbnail"  src="https://d.newsweek.com/en/full/1711221/immigration-reform-ice-joe-biden-trump.jpg?w=1600&h=1200&q=88&f=136a254baa8489b2262f77edaba30934" alt="BY MIH JULIUS">
+                              <figcaption class="pl-3">
+                                <h4>Evangelicals, Police, Who Disliked Trump Immigration Policy May Back Reform</h4>
+                                <p class="m-0 text-secondary">Religious who were uncomfortable with family separations may be open to immigration reform.</p>
+                              </figcaption>
+                            </figure>
+                          </div>
+                          <div class="wrapper">
+                            <figure class="d-flex align-items-center mt-3">
+                              <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1711586/donald-trump-speaking-video-white-house-pardons.jpg" alt="BY MIH JULIUS">
+                              <figcaption class="pl-3">
+                                <h4>Donald Trump Pardons Israeli Spy Handler Who Paid for American Secrets
+                                </h4>
+                                <p class="m-0 text-secondary">The president's air force colonel Aviem Sella, who recruited the infamous spy Jonathan Pollard.</p>
+                              </figcaption>
+                            </figure>
+                          </div>
+                          <div class="wrapper">
+                            <figure class="d-flex align-items-center mt-3">
+                              <img class="img-thumbnail" src="https://im-media.voltron.voanews.com/Drupal/01live-166/styles/sourced/s3/2021-01/2021-01-21T094515Z_1265630252_RC29CL91MU06_RTRMADP_3_USA-BIDEN-CORONAVIRUS.JPG?itok=HHn0DX0m" alt="BY MIH JULIUS">
+                              <figcaption class="pl-3">
+                                <h4>'Joe Biden's Schedule for His First Day As President</h4>
+                                <p class="m-0 text-secondary">Chinese Communist Party newspaper Global Times has been coy about its preferred presidential pick, but the state-run tabloid has Secretary of State.</p>
+                              </figcaption>
+                            </figure>
+                          </div>
+
+                          <div class="wrapper">
+                            <figure class="d-flex align-items-center mt-3">
+                              <img class="img-thumbnail" src="https://im-media.voltron.voanews.com/Drupal/01live-166/styles/sourced/s3/2021-01/2021-01-21T094515Z_1265630252_RC29CL91MU06_RTRMADP_3_USA-BIDEN-CORONAVIRUS.JPG?itok=HHn0DX0m" alt="BY MIH JULIUS">
+                              <figcaption class="pl-3">
+                                <h4>'Joe Biden's Schedule for His First Day As President</h4>
+                                <p class="m-0 text-secondary">Chinese Communist Party newspaper Global Times has been coy about its preferred presidential pick, but the state-run tabloid has Secretary of State.</p>
+                              </figcaption>
+                            </figure>
+                          </div>
+                          <div class="wrapper">
+                            <figure class="d-flex align-items-center mt-3">
+                              <img class ="img-thumbnail" src="https://d.newsweek.com/en/full/1711234/migrant-child-us-mexico-border-stranded-trump.jpg" alt="BY MIH JULIUS">
+                              <figcaption class="pl-3">
+                                <h4>Biden's Biggest Challenge? 67,000 Migrants Stranded at U.S.-Mexico Border</h4>
+                                <p class="m-0 text-secondary">The incoming president has not said what he plans to do with the tens of thousands of asylum-seekers  along the border</p>
+                              </figcaption>
+                            </figure>
+                        </div>
+                        <div class="wrapper">
+                            <figure class="d-flex align-items-center mt-3">
+                              <img class="img-thumbnail"  src="https://d.newsweek.com/en/full/1711221/immigration-reform-ice-joe-biden-trump.jpg?w=1600&h=1200&q=88&f=136a254baa8489b2262f77edaba30934" alt="BY MIH JULIUS">
+                              <figcaption class="pl-3">
+                                <h4>Evangelicals, Police, Who Disliked Trump Immigration Policy May Back Reform</h4>
+                                <p class="m-0 text-secondary">Religious who were uncomfortable with family separations may be open to immigration reform.</p>
+                              </figcaption>
+                            </figure>
+                          </div>
+                          <div class="wrapper">
+                            <figure class="d-flex align-items-center mt-3">
+                              <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1711642/russian-embassy-washington-dc.jpg?w=1600&h=1200&q=88&f=9299182aded97737fb13f128674144d4" alt="BY MIH JULIUS">
+                              <figcaption class="pl-3">
+                                <h4>U.S. Cut Russia Consulate Phones Before Trump's Last Day, Moscow Claims</h4>
+                                <p class="m-0 text-secondary">Officials  be the biggest country in the world to be testing everybody.</p>
+                              </figcaption>
+                            </figure>
+                          </div>
+                          <div class="wrapper">
+                            <figure class="d-flex align-items-center mt-3">
+                              <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1711620/abortion.jpg?w=1600&h=1200&q=88&f=70a99cffe577870e3f0d07636e0a6254" alt="BY MIH JULIUS">
+                              <figcaption class="pl-3">
+                                <h4>Mississippi Bill Classifying Abortions as Murder Introduced by GOP Lawmaker</h4>
+                                <p class="m-0 text-secondary">More than 782,000  and economists warn "we're not out of the woods yet".</p>
+                              </figcaption>
+                            </figure>
+                          </div>
+                          <div class="wrapper">
+                            <figure class="d-flex align-items-center mt-3">
+                              <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1711569/rep-john-katko.jpg?w=790&f=c6c0e4cf4c79175b37ce68180fa32d61" alt="MIH JULIUS">
+                              <figcaption class="pl-3">
+                                <h4>GOP Rep. John Katko Says Capitol Riots 'Worse Than People Realized'</h4>
+                                <p class="m-0 text-secondary">In separate  of training exercises involving U.S. Marines, despite conflicting accounts.</p>
+                              </figcaption>
+                            </figure>
+                          </div>
+                          <div class="wrapper">
+                            <figure class="d-flex align-items-center mt-3">
+                              <img class = "img-thumbnail" src="https://www.ajc.com/resizer/g3eiXq6ae5GqOE5VI7Yp_ghmFy0=/1066x600/cloudfront-us-east-1.images.arcpublishing.com/ajc/CM5UAPRG6CZO7BYIVK4QT324GE.jpg" alt="BYMIH JULIUS">
+                              <figcaption class="pl-3">
+                                <h4>Jon Ossoff, Raphael Warnock Certified by Georgia as Senate Runoff Winners</h4>
+                                <p class="m-0 text-secondary">Control of the Senate will be decided  be an expensive race.</p>
+                              </figcaption>
+                            </figure>
+                          </div>
+                          <div class="wrapper">
+                            <figure class="d-flex align-items-center mt-3">
+                              <img class="img-thumbnail" src="https://d.newsweek.com/en/full/1712782/rep-boebert-denies-capitol-giving-insurrectionists-tour.jpg?w=1600&h=1600&q=88&f=5203f5cfd60edd22ad8efc634b9551cb" alt="BY MIH JULIUS">
+                              <figcaption class="pl-3">
+                                <h4>Lauren Boebert Rejects Claims She Gave Rioters Capitol</h4>
+                                <p class="m-0 text-secondary">The four opposition MPs were  of endangering national security.</p>
+                              </figcaption>
+                            </figure>
+                          </div>  
+                    </section>
+                  </div>
+                
+            
+
+                    <!-- FEATURED STORIES  -->
+
+             <div class="col-12 col-md-5 order-md-1 col-lg-3">
+                
+                    <section class="featured-stories bg-white p-3 mt-3 mt-md-0">
+                      <h2 class="text-muted">FEATURED STORIES</h2>
+                      <article>
+                        <figure class="boxed shadow-sm">
+                          <img class="w-100" src="https://d.newsweek.com/en/full/1711616/donald-trump.jpg?w=790&f=011044b698a011462e7e73e5c52ddd4e" alt="U.S">
+                          <figcaption class="bg-white py-1 px-3 font-weight-bold">U.S.</figcaption>
+                        </figure>
+                        <h3>The 73 People Pardoned by Donald Trump on His Last Day As President</h3>
+                        <p>Notable people pardoned by Trump today include former White House chief strategist Steve Bannon and rapper Lil Wayne.</p>
+                      </article>
+                      <article>
+                        <figure class="boxed shadow-sm">
+                          <img class="w-100" src="https://d.newsweek.com/en/full/1711585/trump-waves-south-lawn.jpg?w=1600&h=1600&q=88&f=428e8dd650738410388e44f8a61b1976" alt="Politics">
+                          <figcaption class="bg-white py-1 px-3 font-weight-bold">POLITICS</figcaption>
+                        </figure>
+                        <h3>Donald Trump Can Issue Secret Pardons, but They're Risky</h3>
+                        <p>Trump chose not to issue pardons for himself of his personal attorney, former New York Mayor Rudy Giuliani.</p>
+                      </article>
+                      <article>
+                        <figure class="boxed shadow-sm">
+                          <img class="w-100" src="https://d.newsweek.com/en/full/1702746/newsweek-expert-forum.png?w=1600&h=1200&q=88&f=01e41a7258f61d423fb57697fc58f403" alt="Politics">
+                          <figcaption class="bg-white py-1 px-3 font-weight-bold">EXPERTS</figcaption>
+                        </figure>
+                        <h3>Newsweek Announces Launch of the Newsweek Expert Forum</h3>
+                        <p>The anti-Trump group took aim at the president and his allies in the GOP ahead of Election Day, and is now pivoting to target those supporting his actions since November 3.
+                        </p>
+                      </article>
+                      <article>
+                        <figure class="boxed shadow-sm">
+                          <img class="w-100" src="https://d.newsweek.com/en/full/1711574/trump-steps-off-air-force-one.jpg?w=1600&h=1600&q=88&f=6060d19ded2a0c31322fa31007e72f97" alt="politics">
+                          <figcaption class="bg-white py-1 px-3 font-weight-bold">POLITICS</figcaption>
+                        </figure>
+                        <h3>Can Joe Biden Rescind Donald Trump's Pardons?</h3>
+                        <p>The president did not issue pardons for himself, his children or for former New York Mayor Rudy Giuliani.</p>
+                      </article>
+                      <article>
+                        <figure class="boxed shadow-sm">
+                          <img class="w-100" src="https://d.newsweek.com/en/full/1711670/biden-delivers-remarks-during-memorial-service.jpg?w=1600&h=1600&q=88&f=15eaeec0a6676df3694aaad3f6789ebc" alt="politics">
+                          <figcaption class="bg-white py-1 px-3 font-weight-bold">POLITICS</figcaption>
+                        </figure>
+                        <h3>Joe Biden Immigration Orders Upend Donald Trump's Legacy</h3>
+                        <p>The Biden Administration will issue an order stopping construction of the border wall on its first day.</p>
+                      </article>
+                      <article>
+                        <figure class="boxed shadow-sm">
+                          <img class="w-100" src="https://d.newsweek.com/en/full/1711616/donald-trump.jpg?w=790&f=011044b698a011462e7e73e5c52ddd4e" alt="U.S">
+                          <figcaption class="bg-white py-1 px-3 font-weight-bold">U.S.</figcaption>
+                        </figure>
+                        <h3>The 73 People Pardoned by Donald Trump on His Last Day As President</h3>
+                        <p>Notable people pardoned by Trump today include former White House chief strategist Steve Bannon and rapper Lil Wayne.</p>
+                      </article>
+                      <article>
+                        <figure class="boxed shadow-sm">
+                          <img class="w-100" src="https://d.newsweek.com/en/full/1711585/trump-waves-south-lawn.jpg?w=1600&h=1600&q=88&f=428e8dd650738410388e44f8a61b1976" alt="Politics">
+                          <figcaption class="bg-white py-1 px-3 font-weight-bold">POLITICS</figcaption>
+                        </figure>
+                        <h3>Donald Trump Can Issue Secret Pardons, but They're Risky</h3>
+                        <p>Trump chose not to issue pardons for himself of his personal attorney, former New York Mayor Rudy Giuliani.</p>
+                      </article>
+
+                            <!-- SPONSORED INSIGHTS -->
+                      <article>
+                        <figure class="boxed shadow-sm">
+                          <img class="w-100" src="https://d.newsweek.com/en/full/1690478/hokkaido-forest-pic.jpg" alt="SPONSORED">
+                          <figcaption class="bg-white py-1 px-3 font-weight-bold">SPONSORED INSIGHT</figcaption>
+                        </figure>
+                        <h3>Hokkaido: Japan’s Northern Frontier</h3>
+                        <p>Featuring a unique history, uninhibited wildness and at times otherworldly natural spectacles, Hokkaido offers an experience that is completely different from the rest of Japan.</p>
+                      </article>
+                    </section>
+            
+                    <section class="article-cards d-none d-md-block bg-white p-3 mt-3 mt-md-0">
+                      <h2 class="sr-only">A series of artilce cards</h2>
+                      <article class="card mb-4">
+                        <figure class="card-img-top boxed">
+                          <img class="w-100" src="https://www.internationalschoolsearch.com/images/uploads/980c31bfdaa51472959ea244ab8ddad2.jpg" alt="Sponsored insight">
+                          <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">SPONSORED INSIGHT</figcaption>
+                        </figure>
+                        <div class="card-body">
+                          <h3 class="card-title font-weight-bolder">What Makes International Schools so Special?</h3>
+                          <p class="card-text">One of the single most important decisions you make for your child is whom to entrust with their education. See why so many parents are turning to International Schools.</p>
+                        </div>
+                      </article>
+                      <article class="card mb-4">
+                        <figure class="card-img-top boxed">
+                          <img class="w-100" src="https://d.newsweek.com/en/full/1675787/americas-most-responsible-companies-2021.png?w=1310&q=95&f=fdc5ccfead44910f025db34c699bce4a" alt="RANKINGS">
+                          <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">RANKINGS</figcaption>
+                        </figure>
+                        <div class="card-body">
+                          <h3 class="card-title font-weight-bolder">America's Most Responsible Companies 2021
+                        </h3>
+                          <p class="card-text">We partnered with Statista to rank the country's Most Responsible Companies. They share the values that we all prioritize, and that's worth recognizing in 2021</p>
+                        </div>
+                      </article>
+                      <article class="card mb-4">
+                        <figure class="card-img-top boxed">
+                          <img class="w-100" src="https://assets.entrepreneur.com/content/3x2/2000/1593154436-Ent-Roofstock.png?width=600&crop=16:9" alt="Sponsored insight">
+                          <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">Sponsored insight</figcaption>
+                        </figure>
+                        <div class="card-body">
+                          <h3 class="card-title font-weight-bolder">75% of Roofstock users are first-time real estate investors, and more than half are under 35.</h3>
+                        </div>
+                      </article>
+
+                    </section>
+            
+            </div>
+
+         
+
+                <!-- the debate  -->
+
+
+      <div class="col-12 col-lg-4 order-md-3 sticky-lg d-flex flex-column">
+        <section class="debate bg-white p-3 mt-3 mt-md-0">
+          <h2 class="text-muted border-bottom">THE DEBATE</h2>
+          <div class="wrapper">
+            <figure class="d-flex align-items-center  mt-3">
+                <img src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1673623/froma-harrop.png?w=63&amp;h=63&amp;f=2ba48b46c4bcf031c010ff486c04d55b" alt="" width="63" height="63" loading="lazy">
+              <figcaption class="pl-3">
+                <h4>Media Have Every Right to Cancel Trump</h4>
+                <p class="m-0">BY <strong>FROMA HARROP</strong></p>
+              </figcaption>
+            </figure>
+            <div class="vs-wrapper">
+              <div class="line2"></div>
+              <img class = "w-100" src="images/the-debate.png" alt="the debate">
+            </div>
+            <figure class="d-flex align-items-center justify-content-between mt-3">
+              <figcaption class="pl-3">
+                <h4>After Parler Ban, Rein in Big Tech Now or Cease Being Free Citizens</h4>
+                <p class="m-0">BY <strong> RACHEL BOVARD</strong></p>
+              </figcaption>
+              <img src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1591942/rachel-bovard.png?w=63&amp;h=63&amp;f=4015164d66f974605b08657edb079340" alt="" width="63" height="63" loading="lazy">
+            </figure>
+          </div>
+        </section>
+     
+
+                        <!-- the opinion section -->
+
+                        <section class="opinion bg-white p-3 mt-3 mt-md-0">
+                            <h2 class="text-muted border-bottom">OPINION</h2>
+                            <div class="wrapper border-bottom">
+                              <figure class="d-flex align-items-center mt-3">
+                                <img src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711112/frank-cilluffo-stewart-baker.png?w=63&amp;h=63&amp;f=c8715cf70500acc34647c1513b28d46f" alt="" width="63" height="63" loading="lazy">
+                                <figcaption class="pl-3">
+                                  <h4>U.S. Supply Chain: Stop Driving Blind</h4>
+                                  <p class="m-0 text-secondary"><strong>BY FRANK CILLUFFO AND STEWART BAKER</strong></p>
+                                </figcaption>
+                              </figure>
+                            </div>
+                            <div class="wrapper border-bottom">
+                                <figure class="d-flex align-items-center mt-3">
+                                    <img src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711112/frank-cilluffo-stewart-baker.png?w=63&amp;h=63&amp;f=c8715cf70500acc34647c1513b28d46f" alt="" width="63" height="63" loading="lazy">
+                                  <figcaption class="pl-3">
+                                    <h4>U.S. Supply Chain: Stop Driving Blind</h4>
+                                    <p class="m-0 text-secondary"><strong>BY FRANK CILLUFFO AND STEWART BAKER</strong></p>
+                                  </figcaption>
+                                </figure>
+                              </div>
+                              <div class="wrapper border-bottom">
+                                <figure class="d-flex align-items-center mt-3">
+                                    <img src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711112/frank-cilluffo-stewart-baker.png?w=63&amp;h=63&amp;f=c8715cf70500acc34647c1513b28d46f" alt="" width="63" height="63" loading="lazy">
+                                  <figcaption class="pl-3">
+                                    <h4>U.S. Supply Chain: Stop Driving Blind</h4>
+                                    <p class="m-0 text-secondary"><strong>BY FRANK CILLUFFO AND STEWART BAKER</strong></p>
+                                  </figcaption>
+                                </figure>
+                              </div>
+                              <div class="wrapper border-bottom">
+                                <figure class="d-flex align-items-center mt-3">
+                                    <img src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711112/frank-cilluffo-stewart-baker.png?w=63&amp;h=63&amp;f=c8715cf70500acc34647c1513b28d46f" alt="" width="63" height="63" loading="lazy">
+                                  <figcaption class="pl-3">
+                                    <h4>U.S. Supply Chain: Stop Driving Blind</h4>
+                                    <p class="m-0 text-secondary"><strong>BY FRANK CILLUFFO AND STEWART BAKER</strong></p>
+                                  </figcaption>
+                                </figure>
+                              </div>
+                              <div class="wrapper border-bottom">
+                                <figure class="d-flex align-items-center mt-3">
+                                    <img src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711112/frank-cilluffo-stewart-baker.png?w=63&amp;h=63&amp;f=c8715cf70500acc34647c1513b28d46f" alt="" width="63" height="63" loading="lazy">
+                                  <figcaption class="pl-3">
+                                    <h4>U.S. Supply Chain: Stop Driving Blind</h4>
+                                    <p class="m-0 text-secondary"><strong>BY FRANK CILLUFFO AND STEWART BAKER</strong></p>
+                                  </figcaption>
+                                </figure>
+                              </div>
+                              <div class="wrapper border-bottom">
+                                <figure class="d-flex align-items-center mt-3">
+                                    <img src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711112/frank-cilluffo-stewart-baker.png?w=63&amp;h=63&amp;f=c8715cf70500acc34647c1513b28d46f" alt="" width="63" height="63" loading="lazy">
+                                  <figcaption class="pl-3">
+                                    <h4>U.S. Supply Chain: Stop Driving Blind</h4>
+                                    <p class="m-0 text-secondary"><strong>BY FRANK CILLUFFO AND STEWART BAKER</strong></p>
+                                  </figcaption>
+                                </figure>
+                              </div>
+                              <div class="wrapper border-bottom">
+                                <figure class="d-flex align-items-center mt-3">
+                                    <img src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711112/frank-cilluffo-stewart-baker.png?w=63&amp;h=63&amp;f=c8715cf70500acc34647c1513b28d46f" alt="" width="63" height="63" loading="lazy">
+                                  <figcaption class="pl-3">
+                                    <h4>U.S. Supply Chain: Stop Driving Blind</h4>
+                                    <p class="m-0 text-secondary"><strong>BY FRANK CILLUFFO AND STEWART BAKER</strong></p>
+                                  </figcaption>
+                                </figure>
+                              </div>
+                              <div class="wrapper border-bottom">
+                                <figure class="d-flex align-items-center mt-3">
+                                    <img src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711112/frank-cilluffo-stewart-baker.png?w=63&amp;h=63&amp;f=c8715cf70500acc34647c1513b28d46f" alt="" width="63" height="63" loading="lazy">
+                                  <figcaption class="pl-3">
+                                    <h4>U.S. Supply Chain: Stop Driving Blind</h4>
+                                    <p class="m-0 text-secondary"><strong>BY FRANK CILLUFFO AND STEWART BAKER</strong></p>
+                                  </figcaption>
+                                </figure>
+                            </div>
+
+                            <!-- Sponsored insights / Rankings -->
+
+                            <article class="card mb-4">
+                                <figure class="card-img-top boxed">
+                                  <img class="w-100" src="https://www.internationalschoolsearch.com/images/uploads/980c31bfdaa51472959ea244ab8ddad2.jpg" alt="Sponsored insight">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">SPONSORED INSIGHT</figcaption>
+                                </figure>
+                                <div class="card-body">
+                                  <h3 class="card-title font-weight-bolder">What Makes International Schools so Special?</h3>
+                                  <p class="card-text">One of the single most important decisions you make for your child is whom to entrust with their education. See why so many parents are turning to International Schools.</p>
+                                </div>
+                              </article>
+
+                              <!-- Free signup -->
+
+                              <div class="newsletter-signup"><form class="free-signup">
+                                <label for="email_address" class="n-title flex-xs d-flex flex-row align-items-center font-weight-bolder ai-c "><span class="icon-n"></span>START YOUR DAY WITH OUR TOP 5 ARTICLES</label>
+                                <input type="text" id="email_address" class="form-text" placeholder="Email address">
+                                <input type="submit" class="form-submit border-danger btn-outline-danger" value="Free Sign Up"></form></div>
+
+                              <article class="card mb-4">
+                                <figure class="card-img-top boxed">
+                                  <img class="w-100" src="https://d.newsweek.com/en/full/1675787/americas-most-responsible-companies-2021.png?w=1310&q=95&f=fdc5ccfead44910f025db34c699bce4a" alt="RANKINGS">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">RANKINGS</figcaption>
+                                </figure>
+                                <div class="card-body">
+                                  <h3 class="card-title font-weight-bolder">America's Most Responsible Companies 2021
+                                </h3>
+                                  <p class="card-text">We partnered with Statista to rank the country's Most Responsible Companies. They share the values that we all prioritize, and that's worth recognizing in 2021</p>
+                                </div>
+                              </article>
+                              <article class="card mb-4">
+                                <figure class="card-img-top boxed">
+                                  <img class="w-100" src="https://assets.entrepreneur.com/content/3x2/2000/1593154436-Ent-Roofstock.png?width=600&crop=16:9" alt="Sponsored insight">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">Sponsored insight</figcaption>
+                                </figure>
+                                <div class="card-body">
+                                  <h3 class="card-title font-weight-bolder">75% of Roofstock users are first-time real estate investors, and more than half are under 35.</h3>
+                                </div>
+                              </article>
+                              <article class="card mb-4">
+                                <figure class="card-img-top boxed">
+                                  <img class="w-100" src="https://d.newsweek.com/en/full/1675787/americas-most-responsible-companies-2021.png?w=1310&q=95&f=fdc5ccfead44910f025db34c699bce4a" alt="RANKINGS">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">RANKINGS</figcaption>
+                                </figure>
+                                <div class="card-body">
+                                  <h3 class="card-title font-weight-bolder">America's Most Responsible Companies 2021
+                                </h3>
+                                  <p class="card-text">We partnered with Statista to rank the country's Most Responsible Companies. They share the values that we all prioritize, and that's worth recognizing in 2021</p>
+                                </div>
+                              </article>
+                              <article class="card mb-4">
+                                <figure class="card-img-top boxed">
+                                  <img class="w-100" src="https://d.newsweek.com/en/full/1675787/americas-most-responsible-companies-2021.png?w=1310&q=95&f=fdc5ccfead44910f025db34c699bce4a" alt="RANKINGS">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">RANKINGS</figcaption>
+                                </figure>
+                                <div class="card-body">
+                                  <h3 class="card-title font-weight-bolder">America's Most Responsible Companies 2021
+                                </h3>
+                                  <p class="card-text">We partnered with Statista to rank the country's Most Responsible Companies. They share the values that we all prioritize, and that's worth recognizing in 2021</p>
+                                </div>
+                              </article>
+
+                              <article class="card mb-4">
+                                <figure class="card-img-top boxed">
+                                  <img class="w-100" src="https://d.newsweek.com/en/full/1675787/americas-most-responsible-companies-2021.png?w=1310&q=95&f=fdc5ccfead44910f025db34c699bce4a" alt="RANKINGS">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">RANKINGS</figcaption>
+                                </figure>
+                                <div class="card-body">
+                                  <h3 class="card-title font-weight-bolder">America's Most Responsible Companies 2021
+                                </h3>
+                                  <p class="card-text">We partnered with Statista to rank the country's Most Responsible Companies. They share the values that we all prioritize, and that's worth recognizing in 2021</p>
+                                </div>
+                              </article>
+                              <article class="card mb-4">
+                                <figure class="card-img-top boxed">
+                                  <img class="w-100" src="https://assets.entrepreneur.com/content/3x2/2000/1593154436-Ent-Roofstock.png?width=600&crop=16:9" alt="Sponsored insight">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">Sponsored insight</figcaption>
+                                </figure>
+                                <div class="card-body">
+                                  <h3 class="card-title font-weight-bolder">75% of Roofstock users are first-time real estate investors, and more than half are under 35.</h3>
+                                </div>
+                              </article>
+                              <article class="card mb-4">
+                                <figure class="card-img-top boxed">
+                                  <img class="w-100" src="https://d.newsweek.com/en/full/1675787/americas-most-responsible-companies-2021.png?w=1310&q=95&f=fdc5ccfead44910f025db34c699bce4a" alt="RANKINGS">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold text-primary">RANKINGS</figcaption>
+                                </figure>
+                                <div class="card-body">
+                                  <h3 class="card-title font-weight-bolder">America's Most Responsible Companies 2021
+                                </h3>
+                                  <p class="card-text">We partnered with Statista to rank the country's Most Responsible Companies. They share the values that we all prioritize, and that's worth recognizing in 2021</p>
+                                </div>
+                              </article>
+                             
+                          </section>
+
+
+
+         </div>
+
+    </div>   
+    
+    <!-- the magazine --> 
+
+    <section class=" container-fluid magazine bg-white p-3 mt-3 mt-md-0">
+        <h2 class="font-weight-bolder mb-3 d-flex justify-content-center align-items-center border-md-bottom">
+          <span class="logo px-1 py-1 text-white mr-2">N</span>
+          IN THE MAGAZINE
+        </h2>
+        <div class="container align-items-end">
+           <div class="row upper d-flex align-items-center">
+            <article class="col-12 col-lg-3 mb-3">
+                <figure class="boxed shadow-sm mb-2">
+                    <img class="img-fluid" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1704591/cover-january-22-2021.jpg?w=360&amp;h=480&amp;q=90&amp;f=e1049b6d5baff23ff83f052690f407fa" alt="" >
+                  <figcaption class="issue bg-white py-1 px-3 font-weight-bold">November 20 Issue</figcaption>
+                </figure>
+                <h3 class="see-all font-weight-bolder mb-2 d-flex justify-content-center align-items-end bg-light">
+                  SEE ALL FEATURES
+                  <i class="fas fa-chevron-right ml-2"></i>
+                </h3>
+              </article>
+              
+                <article class="col-12 col-lg-3 mb-4">
+                  <figure class="mb-0">
+                    <img class="img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1699861/pro-trump-mob-seizes-capitol.jpg?w=466&amp;h=311&amp;q=90&amp;f=6211816ab79c75bb0b17db7278ec3b29" alt="" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1699861/pro-trump-mob-seizes-capitol.jpg?w=466&amp;h=311&amp;q=90&amp;f=6211816ab79c75bb0b17db7278ec3b29">
+                    <figcaption class="mt-2">
+                      <button type="button" class="btn btn-danger">COVER</button>
+                      <button type="button" class="btn text-danger font-weight-bold">NEWS</button>
+                    </figcaption>
+                  </figure>
+                  <h4>FBI, DHS, White House Advisers Foresaw Possible Riots, Looked the Other Way</h4>
+                </article>
+                <article class="col-12 col-lg-3 mb-4">
+                  <figure class="mb-0">
+                    <img class="img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1700564/trmpford.jpg?w=466&amp;h=311&amp;q=90&amp;f=71ae3eb76e6ca1bd8befdcb5511eddd7" alt=""   src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1700564/trmpford.jpg?w=466&amp;h=311&amp;q=90&amp;f=71ae3eb76e6ca1bd8befdcb5511eddd7">
+                    <figcaption class="mt-2">
+                      <button type="button" class="btn btn-danger">PERISCOPE</button>
+                      <button type="button" class="btn text-danger font-weight-bold">BUSINESS</button>
+                    </figcaption>
+                  </figure>
+                  <h4>On His Way Out, Trump Trashes America—and the GOP</h4>
+                </article>
+                <article class="col-12 col-lg-3 mb-4">
+                  <figure class="mb-0">
+                    <img class="img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1700594/trump-protest-capitol-washington.jpg?w=466&amp;h=311&amp;q=90&amp;f=a9837670139bfe8eb3a5f707e5698120" alt=""  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1700594/trump-protest-capitol-washington.jpg?w=466&amp;h=311&amp;q=90&amp;f=a9837670139bfe8eb3a5f707e5698120">
+                    <figcaption class="mt-2">
+                      <button type="button" class="btn btn-danger">FEATURES</button>
+                      <button type="button" class="btn text-danger font-weight-bold">WORLD</button>
+                    </figcaption>
+                  </figure>
+                  <h4>Nations Targeted by US for Regime Change Mock Mob Attack on Capitol</h4>
+                </article>
+
+
+              
+
+             </div>
+
+           <div class=" row lower">
+                <article class="col-12 col-lg-3 mb-4">
+                    <figure class="mb-0">
+                      <img class="img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1699861/pro-trump-mob-seizes-capitol.jpg?w=466&amp;h=311&amp;q=90&amp;f=6211816ab79c75bb0b17db7278ec3b29" alt="" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1699861/pro-trump-mob-seizes-capitol.jpg?w=466&amp;h=311&amp;q=90&amp;f=6211816ab79c75bb0b17db7278ec3b29">
+                      <figcaption class="mt-2">
+                        <button type="button" class="btn btn-danger">COVER</button>
+                        <button type="button" class="btn text-danger font-weight-bold">NEWS</button>
+                      </figcaption>
+                    </figure>
+                    <h4>FBI, DHS, White House Advisers Foresaw Possible Riots, Looked the Other Way</h4>
+                  </article>
+                  <article class="col-12 col-lg-3 mb-4">
+                    <figure class="mb-0">
+                      <img class="img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1700564/trmpford.jpg?w=466&amp;h=311&amp;q=90&amp;f=71ae3eb76e6ca1bd8befdcb5511eddd7" alt=""   src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1700564/trmpford.jpg?w=466&amp;h=311&amp;q=90&amp;f=71ae3eb76e6ca1bd8befdcb5511eddd7">
+                      <figcaption class="mt-2">
+                        <button type="button" class="btn btn-danger">PERISCOPE</button>
+                        <button type="button" class="btn text-danger font-weight-bold">BUSINESS</button>
+                      </figcaption>
+                    </figure>
+                    <h4>On His Way Out, Trump Trashes America—and the GOP</h4>
+                  </article>
+                  <article class="col-12 col-lg-3 mb-4">
+                    <figure class="mb-0">
+                      <img class="img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1700594/trump-protest-capitol-washington.jpg?w=466&amp;h=311&amp;q=90&amp;f=a9837670139bfe8eb3a5f707e5698120" alt="" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1700594/trump-protest-capitol-washington.jpg?w=466&amp;h=311&amp;q=90&amp;f=a9837670139bfe8eb3a5f707e5698120">
+                      <figcaption class="mt-2">
+                        <button type="button" class="btn btn-danger">FEATURES</button>
+                        <button type="button" class="btn text-danger font-weight-bold">WORLD</button>
+                      </figcaption>
+                    </figure>
+                    <h4>Nations Targeted by US for Regime Change Mock Mob Attack on Capitol</h4>
+                  </article>
+                  <article class="col-12 col-lg-3 mb-4">
+                    <figure class="mb-0">
+                      <img class="img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1700594/trump-protest-capitol-washington.jpg?w=466&amp;h=311&amp;q=90&amp;f=a9837670139bfe8eb3a5f707e5698120" alt=""   src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1700594/trump-protest-capitol-washington.jpg?w=466&amp;h=311&amp;q=90&amp;f=a9837670139bfe8eb3a5f707e5698120">
+                      <figcaption class="mt-2">
+                        <button type="button" class="btn btn-danger">FEATURES</button>
+                        <button type="button" class="btn text-danger font-weight-bold">WORLD</button>
+                      </figcaption>
+                    </figure>
+                    <h4>Nations Targeted by US for Regime Change Mock Mob Attack on Capitol</h4>
+                  </article>
+              
+            </div>
+        </div>
+    </section>
+
+                    <!-- editors pick -->
+
+                    <section class="editors-pick  bg-white p-3">
+                        <h2 class="font-weight-bolder pb-2 mb-3 d-flex justify-content-center align-items-center border-bottom">
+                          <span class="logo px-2 py-1 text-white mr-2">N</span>
+                          EDITOR'S PICK
+                        </h2>
+                        <div class="row p-3">
+                            <article class="col-12 col-md-6 col-lg-3">
+                                <figure class="boxed shadow-sm">
+                                    <img class = "img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1710360/people-queue-covid-vaccine.jpg?w=397&amp;h=295&amp;f=fd5737d3be64aa41a6f507f982aee6a4" alt="" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1710360/people-queue-covid-vaccine.jpg?w=397&amp;h=295&amp;f=fd5737d3be64aa41a6f507f982aee6a4">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold">TECH $ SCIENCE</figcaption>
+                                </figure>
+                                <h3>Donald Trump's Pardon List Doesn't Include Himself or His Children</h3>
+                                <p>Trump released a list of pardons on Tuesday, as last-minute presidential pardons have been a long-standing custom for outgoing presidents.</p>                                
+                              </article>
+
+
+
+                              <article class="col-12 col-md-6 col-lg-3">
+                                <figure class="boxed shadow-sm">
+                                    <img class = "img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1710320/joe-biden-covid-19-vaccines.jpg?w=397&amp;h=295&amp;f=42c4349d6dfdd76e005b40708866360a" alt=""  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1710320/joe-biden-covid-19-vaccines.jpg?w=397&amp;h=295&amp;f=42c4349d6dfdd76e005b40708866360a">
+                                </figure>
+                                <h3>The president-elect plans to reverse the so-called "Muslim ban" and the exit from the Paris Climate Accords.</h3> <p>Trump released a list of pardons on Tuesday, as last-minute presidential pardons have been a long-standing custom for outgoing presidents.</p>                                 
+                              </article>
+
+
+                              <article class="col-12 col-md-6 col-lg-3">
+                                <figure class="boxed shadow-sm">
+                                    <img class = "img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1710320/joe-biden-covid-19-vaccines.jpg?w=397&amp;h=295&amp;f=42c4349d6dfdd76e005b40708866360a" alt="" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1710320/joe-biden-covid-19-vaccines.jpg?w=397&amp;h=295&amp;f=42c4349d6dfdd76e005b40708866360a">
+                                </figure>
+                                <h3>The president-elect plans to reverse the so-called "Muslim ban" and the exit from the Paris Climate Accords.</h3> <p>Trump released a list of pardons on Tuesday, as last-minute presidential pardons have been a long-standing custom for outgoing presidents.</p>                                 
+                              </article>
+
+                              <article class="col-12 col-md-6 col-lg-3">
+                                <figure class="boxed shadow-sm">
+                                    <img class = "img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1710360/people-queue-covid-vaccine.jpg?w=397&amp;h=295&amp;f=fd5737d3be64aa41a6f507f982aee6a4" alt="" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1710360/people-queue-covid-vaccine.jpg?w=397&amp;h=295&amp;f=fd5737d3be64aa41a6f507f982aee6a4">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold">TECH $ SCIENCE</figcaption>
+                                </figure>
+                                <h3>Donald Trump's Pardon List Doesn't Include Himself or His Children</h3>
+                                <p>Trump released a list of pardons on Tuesday, as last-minute presidential pardons have been a long-standing custom for outgoing presidents.</p>                                
+                              </article>
+                              <article class="col-12 col-md-6 col-lg-3">
+                                <figure class="boxed shadow-sm">
+                                    <img class = "img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1710360/people-queue-covid-vaccine.jpg?w=397&amp;h=295&amp;f=fd5737d3be64aa41a6f507f982aee6a4" alt=""  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1710360/people-queue-covid-vaccine.jpg?w=397&amp;h=295&amp;f=fd5737d3be64aa41a6f507f982aee6a4">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold">TECH $ SCIENCE</figcaption>
+                                </figure>
+                                <h3>Donald Trump's Pardon List Doesn't Include Himself or His Children</h3>
+                                <p>Trump released a list of pardons on Tuesday, as last-minute presidential pardons have been a long-standing custom for outgoing presidents.</p>                                
+                              </article>
+
+                              <article class="col-12 col-md-6 col-lg-3">
+                                <figure class="boxed shadow-sm">
+                                    <img class = "img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1710320/joe-biden-covid-19-vaccines.jpg?w=397&amp;h=295&amp;f=42c4349d6dfdd76e005b40708866360a" alt=""   src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1710320/joe-biden-covid-19-vaccines.jpg?w=397&amp;h=295&amp;f=42c4349d6dfdd76e005b40708866360a">
+                                </figure>
+                                <h3>The president-elect plans to reverse the so-called "Muslim ban" and the exit from the Paris Climate Accords.</h3><p>Trump released a list of pardons on Tuesday, as last-minute presidential pardons have been a long-standing custom for outgoing presidents.</p>                                
+                              </article>
+                              <article class="col-12 col-md-6 col-lg-3">
+                                <figure class="boxed shadow-sm">
+                                    <img class = "img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1710360/people-queue-covid-vaccine.jpg?w=397&amp;h=295&amp;f=fd5737d3be64aa41a6f507f982aee6a4" alt=""  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1710360/people-queue-covid-vaccine.jpg?w=397&amp;h=295&amp;f=fd5737d3be64aa41a6f507f982aee6a4">
+                                  <figcaption class="bg-white py-1 px-3 font-weight-bold">TECH $ SCIENCE</figcaption>
+                                </figure>
+                                <h3>Donald Trump's Pardon List Doesn't Include Himself or His Children</h3>
+                                <p>Trump released a list of pardons on Tuesday, as last-minute presidential pardons have been a long-standing custom for outgoing presidents.</p>                                
+                              </article>
+
+                              <article class="col-12 col-md-6 col-lg-3">
+                                <figure class="boxed shadow-sm">
+                                    <img class = "img-fluid" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1710320/joe-biden-covid-19-vaccines.jpg?w=397&amp;h=295&amp;f=42c4349d6dfdd76e005b40708866360a" alt=""  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1710320/joe-biden-covid-19-vaccines.jpg?w=397&amp;h=295&amp;f=42c4349d6dfdd76e005b40708866360a">
+                                </figure>
+                                <h3>The president-elect plans to reverse the so-called "Muslim ban" and the exit from the Paris Climate Accords.</h3>   <p>Trump released a list of pardons on Tuesday, as last-minute presidential pardons have been a long-standing custom for outgoing presidents.</p>                             
+                              </article>
+                        </div> 
+                        
+                        <div class="editor-content">
+
+                            <!-- us -->
+
+                            <div class=" container us container-fluid bg-white border-top pt-4 mt-4">
+                                <h2 class="font-weight-bolder text-danger">U.S</h2>
+                                <div class="container">
+                                    <div class="row">
+                                      <div class="main-content bg-white col-12 col-lg-4">
+                                     <figure>
+                                        <img class = "w-100" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711647/vanderburgh-john-keown.jpg?w=397&amp;h=265&amp;f=4db7c0723c0490d9f0576bf575b66abc" alt = "">
+                                      <h3 class="my-2">Indiana Homeless Man Chooses to Be Arrested to Avoid Cold Weather</h3>
+                                    </figure>
+                                      </div>
+
+
+                                    <div class="main-content bg-white col-12 col-lg-4 ">
+
+                                    <figure>
+                                        <img class = "w-100"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711618/antony-blinken-attends-senate-confirming-hearing.jpg?w=397&amp;h=265&amp;f=fc67c970be97a0199e4b5a3508da9736" alt = "">
+                                      <h3 class="my-2">Taipei Says Biden Backs Taiwan As Blinken Warns Invasion 'Grievous Mistake</h3>
+                                    </figure>
+                                  </div> 
+                                  
+                                  <div class="side-content col-12 col-lg-4">
+                                    <figure class="row border-bottom pb-3">
+                                        <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                      <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                    </figure>
+                                    <figure class="row border-bottom pb-3">
+                                        <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                      <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                    </figure>
+                                    <figure class="row border-bottom pb-3">
+                                        <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                      <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                    </figure>
+                                   </div>
+                                </div>
+                                 </div>  
+                            </div>
+                        </div>
+
+                                <!-- world -->
+
+                                <div class=" container world  pt-4 mt-4">
+                                    <h2 class="font-weight-bolder p-3 text-danger">World</h2>
+                                    <div class="container">
+                                    <div class="row">
+                                        <div class="main-content bg-white col-12 col-lg-4 ">
+
+                                        <figure>
+                                            <img class = "w-100"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711583/theresa-may-donald-trump-london-2019.jpg?w=397&amp;h=265&amp;l=64&amp;t=44&amp;f=6bf7b6164e3b5c81632ccd2c1f86987d" alt = "">
+                                          <h3 class="my-2">Biden Offers 'Democracy and Decency' After Trump, Says Former U.K. PM</h3>
+                                        </figure>
+                                      </div>
+
+                                      <div class="main-content bg-white col-12 col-lg-4 ">
+
+                                        <figure>
+                                            <img class = "w-100" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711542/donald-trump-rename-airport-scotland-golf.jpg?w=397&amp;h=265&amp;f=8e72c8e02506426969d575b94c6aa024" alt = "">
+                                          <h3 class="my-2">Scottish Petition Posted to Rename Airport Near Trump Golf Club After Biden</h3>
+                                        </figure>
+                                      </div>
+                                      <div class="main-content bg-white col-12 col-lg-4 ">
+
+                                        <figure class="row border-bottom pb-3">
+                                            <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                          <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                        </figure>
+                                        <figure class="row border-bottom pb-3">
+                                            <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                          <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                        </figure>
+                                        <figure class="row border-bottom pb-3">
+                                            <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                          <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                        </figure>
+                                      </div>
+                                    </div>
+                                   </div>
+                                  </div>
+
+
+                                  <!-- bussiness -->
+
+                                  <div class=" container business border-top pt-4 mt-4">
+                                    <h2 class="font-weight-bolder text-danger">Business</h2>
+                                    <div class="container">
+                                    <div class="row">
+                                        <div class="main-content bg-white col-12 col-lg-4 ">
+                                        <figure>
+                                            <img class = "w-100" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1710976/sheldonadelson.jpg?w=397&amp;h=265&amp;f=07b84d37eeadc42ce989c32d12b84cd2" alt = "">
+                                          <h3 class="my-2">The Absolutely American Life of Sheldon Adelson</h3>
+                                        </figure>
+                                        </div>
+
+                                        <div class="main-content bg-white col-12 col-lg-4 ">
+
+                                        <figure>
+                                            <img class = "w-100" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1709991/loews-hotels-josh-hawley-cancel.jpg?w=397&amp;h=265&amp;f=1fb5f7500c226e921c8709f1b0e12947" alt = "">
+                                          <h3 class="my-2">Alibaba's China Singles Day Sales Dwarf Amazon Record'</h3>
+                                        </figure>
+                                      </div>
+
+                                      <div class="main-content bg-white col-12 col-lg-4 ">
+                                        <figure class="row border-bottom pb-3">
+                                            <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                          <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                        </figure>
+                                        <figure class="row border-bottom pb-3">
+                                            <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                          <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                        </figure>
+                                        <figure class="row border-bottom pb-3">
+                                            <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                          <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                        </figure>
+                                      </div>
+                                     </div>
+                                     </div>
+                                </div>  
+
+                                    <!-- Tech and science  -->
+
+
+                                  <div class=" container business  pt-4 mt-4">
+                                    <h2 class="font-weight-bolder text-danger">Tech and Science</h2>
+
+                                    <div class="container">
+                                    <div class="row">
+                                        <div class="main-content bg-white col-12 col-lg-4 ">
+                                        <figure>
+                                            <img class = "w-100"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711568/anthony-levandowski.jpg?w=397&amp;h=265&amp;f=997bdfde2b8e71d821acabc52da96b73" alt = "">
+                                          <h3 class="my-2">The Absolutely American Life of Sheldon Adelson</h3>
+                                        </figure>
+                                         </div>
+
+                                         <div class="main-content bg-white col-12 col-lg-4 ">
+                                        <figure>
+                                            <img class = "w-100" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1710877/netflix-free-trial.jpg?w=397&amp;h=265&amp;f=270b8a7ad3317cde6fefcc8cbd51f164" alt = "">
+                                          <h3 class="my-2">Alibaba's China Singles Day Sales Dwarf Amazon Record'</h3>
+                                        </figure>
+                                      </div>
+
+                                      <div class="main-content bg-white col-12 col-lg-4 ">
+                                        <figure class="row border-bottom pb-3">
+                                            <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                          <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                        </figure>
+                                        <figure class="row border-bottom pb-3">
+                                            <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                          <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                        </figure>
+                                        <figure class="row border-bottom pb-3">
+                                            <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                          <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                        </figure>
+                                      </div>                               
+                                  </div>
+                                  </div>
+                                </div>
+
+
+                                    <!-- culture -->
+
+
+                                    <div class="container business border-top  pt-4 mt-4">
+                                        <h2 class="font-weight-bolder text-danger">Culture</h2>
+                                        <div class="container">
+                                        <div class="row">
+                                            <div class="main-content bg-white col-12 col-lg-4 ">
+                                            <figure class="">
+                                                <img class = "w-100" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1697332/cul-ps-jared-padalecki-2.jpg?w=397&amp;h=265&amp;l=59&amp;t=40&amp;f=6bb71d7eb250a042646b6febb77da2c6" alt = "">
+                                              <h3 class="my-2">The Absolutely American Life of Sheldon Adelson</h3>
+                                            </figure>
+                                          </div>
+
+                                          <div class="main-content bg-white col-12 col-lg-4 ">
+                                            <figure class="">
+                                                <img class = "w-100" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1587953/riverdale-season-5-time-jump.jpg?w=397&amp;h=265&amp;f=0308a452c5cac3c9959f18a9674a95f8" alt = "">
+                                              <h3 class="my-2">Alibaba's China Singles Day Sales Dwarf Amazon Record'</h3>
+                                            </figure>
+                                          </div>
+                                          <div class="main-content bg-white col-12 col-lg-4 ">
+                                            <figure class="row border-bottom pb-3">
+                                                <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                              <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                            </figure>
+                                            <figure class="row border-bottom pb-3">
+                                                <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                              <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                            </figure>
+                                            <figure class="row border-bottom pb-3">
+                                                <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                              <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                            </figure>
+                                          </div>
+                                        </div>
+                                       </div>
+                                    </div>
+
+
+                                        <!-- sports -->
+
+
+                                        <div class=" container business  pt-4 mt-4">
+                                            <h2 class="font-weight-bolder text-danger">SPORTS</h2>
+                                            <div class="container">
+                                            <div class="row">
+                                                <div class="main-content bg-white col-12 col-lg-4 ">
+                                                <figure class="">
+                                                    <img class = "w-100"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711638/houston-astros-outfielder-george-springer.jpg?w=397&amp;h=265&amp;f=26bca82037f37436a33ec24e36ab56b0" alt = "">
+                                                  <h3 class="my-2">Does Houston Have a Problem? Springer and Harden Gone, Watson May Follow</h3>
+                                                </figure>
+
+                                              </div>
+
+                                              <div class="main-content bg-white col-12 col-lg-4 ">
+                                                <figure class="">
+                                                    <img class = "w-100" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711556/zion-williamson-new-orleans-pelicans.jpg?w=397&amp;h=265&amp;f=5a66bd6b1e8b50b3beb82e561acc5f85" alt = "">
+                                                  <h3 class="my-2">Karl Malone Calls out Zion Williamson: 'Your A** Shouldn't Get Tired'</h3>
+                                                </figure>
+                                              </div>
+                                              <div class="main-content bg-white col-12 col-lg-4 ">
+                                                <figure class="row border-bottom pb-3">
+                                                    <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                                  <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                                </figure>
+                                                <figure class="row border-bottom pb-3">
+                                                    <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                                  <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                                </figure>
+                                                <figure class="row border-bottom pb-3">
+                                                    <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                                  <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+
+                                            <!-- news expert forum -->
+
+                                            <div class="container business border-top  pt-4 mt-4">
+                                                <h2 class="font-weight-bolder text-danger">News Expert Forum</h2>
+                                                <div class="container">
+                                                <div class="row">
+                                                    <div class="main-content bg-white col-12 col-lg-4 ">
+                                                    <figure class="">
+                                                        <img class = "w-100" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1702746/newsweek-expert-forum.png?w=397&amp;h=265&amp;f=c8709c236c7800d2c05ae43ad50f2094" alt = "">
+                                                      <h3 class="my-2">Newsweek Announces Launch of the Newsweek Expert Forum</h3>
+                                                    </figure>
+                                                  </div>
+
+                                                  <div class="main-content bg-white col-12 col-lg-4 ">
+                                                    <figure class="">
+                                                        <img class = "w-100" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1706949/newsweek-expert-forum-members-share-industry-insights.jpg?w=397&amp;h=265&amp;f=304ad0fd81a150111d756ee4658dd09c" alt = "">
+                                                      <h3 class="my-2">Top Workplace Trends to Anticipate in 2021</h3>
+                                                    </figure>
+                                                  </div>
+                                                  <div class="main-content bg-white col-12 col-lg-4 ">
+                                                    <figure class="row border-bottom pb-3">
+                                                        <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                                    <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                                    </figure>
+                                                    <figure class="row border-bottom pb-3">
+                                                        <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95" src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                                    <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                                    </figure>
+                                                    <figure class="row border-bottom pb-3">
+                                                        <img class="" data-src="https://web.archive.org/web/20210120125445/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62" alt="" width="95" height="95"  src="https://web.archive.org/web/20210120125445im_/https://d.newsweek.com/en/full/1711584/tiger-wild-animal-sanctuary-colorado.jpg?w=95&amp;h=95&amp;f=b75680cc8b5188b7ba05594030e1cd62">
+                                                    <h3 class="my-2 col-8">'Tiger King' Zoo Owners Ordered To Hand Over Big Cats to Government</h3>
+                                                    </figure>
+                                                </div>
+                                                </div>
+                                               </div>
+                                            </div>
+
+                                            <!-- subscribe section -->
+
+                                            <div class="row m-0">
+                                                <section class="subscribe bg-white p-3 mt-3 mt-md-0 col-12 col-lg-8">
+                                                  <h2 class= "text-danger">SUBSCRIBE</h2>
+                                                  <div class="w-100 bg-light p-4 d-md-flex justify-content-between align-items-center">
+                                                    <figure class="d-flex justify-content-center position-relative mb-5">
+                                                      <img src="https://d.newsweek.com/en/full/1658908/cover-november-06-11-2020.jpg?w=170&q=95&f=d5654a57e5e73c6bf7d75872dcbf38f9" alt="subscribe">
+                                                      <img class="position-absolute top-image" src="https://d.newsweek.com/en/full/1668137/cover-november-20-2020.jpg?w=170&q=95&f=4908b956c71162b16d2cf0426b9afcbf" alt="subscribe">
+                                                    </figure>
+                                                    <div class="w-md-60 text-center text-md-left">
+                                                      <h4>In-depth Stories You Don't See Elsewhere About Topics You Want to Read!</h4>
+                                                      <p>All Access + Weekly Delivery.<br> Choose A Membership That's Perfect for You!</p>
+                                                      <button type="button" class="btn btn-danger d-flex align-items-center mx-auto mx-md-0">
+                                                        <span>SUBSCRIBE</span>
+                                                        <i class="fas fa-chevron-right mx-2"></i>
+                                                      </button>
+                                                    </div>
+                                                  </div>
+                                                </section>                                   
+                            
+                                        
+                                        <!-- newsletter section  -->
+                                           
+                                                
+                                                
+                                        <section class=" newsletter bg-white p-3 mt-3 mt-md-0 col-12 col-lg-4">
+                                            <h2 class = "text-danger">NEWSLETTER</h2>
+                                            <div class="image-holder row border no-gutters">
+                                              <img class="img-fluid col-12 col-md-6" src="https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&h=265&q=90&f=742bce9a6f72dd8f19ba2e7fd5db06e5" alt="newsletter">
+                                              <div class="col-12 col-md-6 px-2 d-md-flex flex-column justify-content-center">
+                                                <h3 class=" text-dark font-weight-bolder ml-3 text-center my-4">THE STARTING 5</h3>
+                                                <p class=" text-center">See why nearly a quarter of a million subscribers begin their day with the Starting 5.</p>
+                                                <form class="d-flex flex-lg-column mx-3 mb-4">
+                                                  <input class="border flex-grow-1 mb-2 p-2" type="email" placeholder="Email address">
+                                                  <button type="button" class="btn btn-danger flex-grow-1 text-nowrap d-flex align-items-center justify-content-center mb-2">
+                                                    <span>FREE SIGN UP</span>
+                                                    <i class="fas fa-chevron-right mx-2"></i>
+                                                  </button>
+                                               </form>
+                                              </div>
+                                            </div>
+                                          </section>
+                                        </div>                             
+                                            
+                    </section>  
+
+
+
+</main>
+    <footer class="footer bg-white px-5">
+      <div class="row container">
+        <div class="upper-footer d-flex flex-row flex-wrap justify-content-between align-items-end border-bottom">
+        
+          <div class="left-side d-flex flex-row flex-wrap align-items-end">
+            <a href="#"><svg
+                class="footer-logo"
+                version="1.1"
+                width="396"
+                height="60"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 396 60"
+                style="enable-background: new 0 0 395.6 60"
+                xml:space="preserve">
+                <g>
+                  <path
+                    class="st0"
+                    d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"
+                  ></path>
+                </g></svg></a>
+            <div class="copyright">
+              <p>&copy; 2021 NEWSWEEK DIGITAL LLC</p>
+            </div>
+          </div>
+          <div class="right-side 2rem ">
+            <a href="#"
+              ><i
+                class="fab fa-facebook-square mr-2 text-dark font-weight-bold"
+              ></i
+            ></a>
+            <a href="#"
+              ><i class="fab fa-twitter mr-2 text-dark font-weight-bold"></i
+            ></a>
+            <a href="#"
+              ><i class="fab fa-instagram mr-2 text-dark font-weight-bold"></i
+            ></a>
+            <a href="#"
+              ><i class="fab fa-tumblr mr-2 text-dark font-weight-bold"></i
+            ></a>
+            <a href="#"
+              ><i class="fab fa-linkedin mr-2 text-dark font-weight-bold"></i
+            ></a>
+          </div>
+        
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="editions d-flex align-items-center mt-2">
+          <h3 class="mx-2">Editions:</h3>
+          <ul class="m-0 p-0">
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">U.S. Edition</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">日本</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">Pakistan</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">Polsk</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">România</a>
+            </li>
+          </ul>
+        </div>
+        <div class="about-us">
+          <ul class="m-0 p-0">
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">About Us</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">Corrections</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">Contact Us</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">Editorial Guidelines</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">Advertise</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">Copyright</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">Terms &amp; Conditions</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">Privacy Policy</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">Cookie Policy</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">Terms of Sale</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">Archive</a>
+            </li>
+            <li class="d-inline-block px-2">
+              <a href="#" class="text-dark">Announcements</a>
+            </li>
+          </ul>
+        </div>  
+    </div>
+</footer>
+  </body>
+</html>
