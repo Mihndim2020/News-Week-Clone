@@ -215,7 +215,7 @@ header nav .trapezoid {
 .border,
 .about-us ul li {
   border-right: 0.5px solid #d9d9d9 !important;
-  height: 50%;
+  /* height: 50%; */
 }
 
 .icon-input {
@@ -233,7 +233,7 @@ header nav .trapezoid {
 
 .footer-logo {
   width: 250px;
-  height: 70px;
+  height: 71px;
   fill: red;
 }
 
