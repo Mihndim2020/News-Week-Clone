@@ -125,7 +125,7 @@ main h4:hover {
 }
 
 .free-signup .form-text {
-  color: #555;
+  color: rgb(71, 68, 68);
   font-size: 14px;
   font-family: inherit;
   background-color: white;
@@ -181,7 +181,7 @@ main .subscribe .top-image {
   width: 350px;
   height: 90px;
   padding: 20px;
-  fill: white;
+  fill: rgb(252, 245, 245);
 }
 
 header nav {
@@ -196,7 +196,7 @@ header nav .trapezoid {
 }
 
 .border-top {
-  border-bottom: 1px solid #dee2e6 !important;
+  border-bottom: 1px solid #e9f0f7 !important;
   margin-top: 20px;
 }
 
